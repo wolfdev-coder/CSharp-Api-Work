@@ -9,7 +9,7 @@ namespace Working
 
         private void enterBtn_Click(object sender, EventArgs e)
         {
-            if (loginTxt.Text.Contains("Admin"))
+            if (loginTxt.Text.Contains("Admin") && passwordBox.Text == "123")
             {
                 this.Close();
                 Thread openForm = new Thread(MainOpen);

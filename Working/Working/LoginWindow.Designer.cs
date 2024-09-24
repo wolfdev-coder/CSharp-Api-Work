@@ -31,6 +31,7 @@
             enterBtn = new Button();
             helloLbl = new Label();
             loginTxt = new TextBox();
+            passwordBox = new TextBox();
             SuspendLayout();
             // 
             // enterBtn
@@ -57,16 +58,25 @@
             // loginTxt
             // 
             loginTxt.Font = new Font("Segoe UI", 19F);
-            loginTxt.Location = new Point(253, 222);
+            loginTxt.Location = new Point(248, 155);
             loginTxt.Name = "loginTxt";
             loginTxt.Size = new Size(254, 41);
             loginTxt.TabIndex = 2;
+            // 
+            // passwordBox
+            // 
+            passwordBox.Font = new Font("Segoe UI", 19F);
+            passwordBox.Location = new Point(248, 241);
+            passwordBox.Name = "passwordBox";
+            passwordBox.Size = new Size(254, 41);
+            passwordBox.TabIndex = 3;
             // 
             // LoginWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(passwordBox);
             Controls.Add(loginTxt);
             Controls.Add(helloLbl);
             Controls.Add(enterBtn);
@@ -81,5 +91,6 @@
         private Button enterBtn;
         private Label helloLbl;
         private TextBox loginTxt;
+        private TextBox passwordBox;
     }
 }

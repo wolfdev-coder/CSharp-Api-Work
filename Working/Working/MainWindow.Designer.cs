@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             newsBtn = new Button();
+            infoLbl = new Label();
             SuspendLayout();
             // 
             // newsBtn
             // 
             newsBtn.Font = new Font("Segoe UI", 19F);
-            newsBtn.Location = new Point(45, 35);
+            newsBtn.Location = new Point(245, 185);
             newsBtn.Name = "newsBtn";
             newsBtn.Size = new Size(240, 60);
             newsBtn.TabIndex = 0;
@@ -42,19 +43,32 @@
             newsBtn.UseVisualStyleBackColor = true;
             newsBtn.Click += newsBtn_Click;
             // 
+            // infoLbl
+            // 
+            infoLbl.AutoSize = true;
+            infoLbl.Font = new Font("Segoe UI", 29F);
+            infoLbl.Location = new Point(213, 28);
+            infoLbl.Name = "infoLbl";
+            infoLbl.Size = new Size(315, 52);
+            infoLbl.TabIndex = 1;
+            infoLbl.Text = "Основное меню";
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(infoLbl);
             Controls.Add(newsBtn);
             Name = "MainWindow";
             Text = "MainWindow";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button newsBtn;
+        private Label infoLbl;
     }
 }
