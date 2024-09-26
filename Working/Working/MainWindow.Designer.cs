@@ -30,12 +30,15 @@
         {
             newsBtn = new Button();
             infoLbl = new Label();
+            exitBtn = new Button();
+            adminAdd = new Button();
+            stopBot = new Button();
             SuspendLayout();
             // 
             // newsBtn
             // 
             newsBtn.Font = new Font("Segoe UI", 19F);
-            newsBtn.Location = new Point(245, 185);
+            newsBtn.Location = new Point(253, 112);
             newsBtn.Name = "newsBtn";
             newsBtn.Size = new Size(240, 60);
             newsBtn.TabIndex = 0;
@@ -53,15 +56,52 @@
             infoLbl.TabIndex = 1;
             infoLbl.Text = "Основное меню";
             // 
+            // exitBtn
+            // 
+            exitBtn.Font = new Font("Segoe UI", 19F);
+            exitBtn.Location = new Point(633, 371);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(134, 67);
+            exitBtn.TabIndex = 2;
+            exitBtn.Text = "Выход";
+            exitBtn.UseVisualStyleBackColor = true;
+            exitBtn.Click += exitBtn_Click;
+            // 
+            // adminAdd
+            // 
+            adminAdd.Font = new Font("Segoe UI", 19F);
+            adminAdd.Location = new Point(236, 195);
+            adminAdd.Name = "adminAdd";
+            adminAdd.Size = new Size(292, 74);
+            adminAdd.TabIndex = 3;
+            adminAdd.Text = "Запустить бота";
+            adminAdd.UseVisualStyleBackColor = true;
+            adminAdd.Click += adminAdd_Click;
+            // 
+            // stopBot
+            // 
+            stopBot.Font = new Font("Segoe UI", 19F);
+            stopBot.Location = new Point(236, 296);
+            stopBot.Name = "stopBot";
+            stopBot.Size = new Size(292, 74);
+            stopBot.TabIndex = 4;
+            stopBot.Text = "Остановить бота";
+            stopBot.UseVisualStyleBackColor = true;
+            stopBot.Visible = false;
+            stopBot.Click += stopBot_Click;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(stopBot);
+            Controls.Add(adminAdd);
+            Controls.Add(exitBtn);
             Controls.Add(infoLbl);
             Controls.Add(newsBtn);
             Name = "MainWindow";
-            Text = "MainWindow";
+            Text = "MyApp";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -70,5 +110,8 @@
 
         private Button newsBtn;
         private Label infoLbl;
+        private Button exitBtn;
+        private Button adminAdd;
+        private Button stopBot;
     }
 }
